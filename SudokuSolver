@@ -1,4 +1,4 @@
-
+//Sudoku Puzzle Solver in C++
 
 #include <iostream>
 #include <cstdio>
@@ -11,8 +11,7 @@ using namespace std;
 bool FindUnassignedLocation(int grid[N][N], int &row, int &col);
 bool isSafe(int grid[N][N], int row, int col, int num);
 
-/* assign values to all unassigned locations for Sudoku solution  
- */
+//assign values to all unassigned locations for Sudoku solution  
 bool SolveSudoku(int grid[N][N])
 {
     int row, col;
@@ -72,8 +71,7 @@ bool UsedInBox(int grid[N][N], int boxStartRow, int boxStartCol, int num)
     return false;
 }
 
-/* Returns whether it will be legal to assign num to the given row,col location. 
- */
+// Returns whether it will be legal to assign num to the given row,col location. 
 bool isSafe(int grid[N][N], int row, int col, int num)
 {
     return !UsedInRow(grid, row, num) && !UsedInCol(grid, col, num) &&
